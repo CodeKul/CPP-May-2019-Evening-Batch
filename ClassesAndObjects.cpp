@@ -16,16 +16,31 @@ class MyClass {
             a = obj.a;
             cout<<"in copy constructor"<<endl;
         }
+        int setA(char c) {
+            a = c;
+            return a;
+        }
         void setA(int b) {
             a = b;
         }
+
+        void setA() {
+            a = 0;
+        }
+        
         void display() {
             cout<<"a: "<<a<<endl;
         }
+        int square_a();
         ~MyClass() {
             cout<<"in destructor - "<<a<<endl;
         }
 };
+
+int MyClass :: square_a() {
+    int b = a*a;
+    return b;
+}
 
 int main() {
 
@@ -40,6 +55,8 @@ int main() {
 
     obj1.display();
     obj2.display();
+
+    cout<<"Square: "<<obj2.square_a()<<endl;
 
     return 0;
 }
