@@ -29,20 +29,24 @@ OverloadingExample :: OverloadingExample(int a, float b, char c) {
 
 void OverloadingExample :: set(int a) {
     this->a = a;
+    cout<<"int"<<endl;
 }
 
 void OverloadingExample :: set(float b) {
     this->b = b;
+    cout<<"float"<<endl;
 }
 
 void OverloadingExample :: set(char c) {
     this->c = c;
+    cout<<"char"<<endl;
 }
 
 void OverloadingExample :: set(int a, float b, char c) {
     this->a = a;
     this->b = b;
     this->c = c;
+    cout<<"int, float, char"<<endl;
 }
 
 void OverloadingExample :: display() {
